@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tesouros Ocultos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo Tesouros Ocultos">
+    </div>
+    <h1>Tesouros Ocultos</h1>
+  </header>
+
+  <nav>
+    <button class="active" onclick="showTab('itens')">Itens</button>
+    <button onclick="showTab('categorias')">Categorias</button>
+    <button onclick="showTab('desejos')">Desejos</button>
+  </nav>
+
+  <main>
+    <!-- Aba Itens -->
+    <section id="itens" class="active">
+      <h2>Adicionar Item</h2>
+      <input type="text" id="itemNome" placeholder="Nome do item">
+      <select id="itemCategoria"></select>
+      <input type="number" id="itemValor" placeholder="Valor (R$)">
+      <input type="file" id="itemFoto" accept="image/*">
+      <button onclick="adicionarItem()">Adicionar</button>
+      <h3>Itens da Coleção:</h3>
+      <ul id="listaItens"></ul>
+    </section>
+
+    <!-- Aba Categorias -->
+    <section id="categorias">
+      <h2>Gerenciar Categorias</h2>
+      <input type="text" id="novaCategoria" placeholder="Nova categoria">
+      <button onclick="adicionarCategoria()">Adicionar Categoria</button>
+      <ul id="listaCategorias"></ul>
+    </section>
+
+    <!-- Aba Desejos -->
+    <section id="desejos">
+      <h2>Lista de Desejos</h2>
+      <input type="text" id="desejoNome" placeholder="Nome do item desejado">
+      <input type="number" id="desejoValor" placeholder="Valor estimado (R$)">
+      <button onclick="adicionarDesejo()">Adicionar</button>
+      <ul id="listaDesejos"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
